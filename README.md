@@ -17,4 +17,8 @@ RFA Proyect for DeepGlobe-Road-Extraction
  # install requirements
  pip install uv
  uv pip install -r requirements.txt
+
+ pip install ipykernel
+ python -m ipykernel install --user --name=venv --display-name "Python (venv)"
+
 ```
