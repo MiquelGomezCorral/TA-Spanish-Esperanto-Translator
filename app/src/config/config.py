@@ -3,31 +3,27 @@
 Configuration of project variables that we want to have available
 everywhere and considered configuration.
 """
-# import os
+import os
 import dataclasses
 from dataclasses import dataclass
 from argparse import Namespace
 
-@dataclass 
+
+@dataclass
 class Configuration:
-    """Configuration class for the project."""
+    DATA_PATH: str = os.path.join("..", "data")
+    RAW_DATA_PATH: str = os.path.join(DATA_PATH, "raw")
+    PROCESSED_DATA_PATH: str = os.path.join(DATA_PATH, "processed")
+    MODELS_PATH: str = os.path.join("..", "models")
+    RESULTS_PATH: str = os.path.join("..", "results")
 
-    exp_name: str = "base_name"
-    seed:     int = 42
+    spanish_data: str = os.path.join(RAW_DATA_PATH, "CCMatrix.eo-es.es")
+    esperanto_data: str = os.path.join(RAW_DATA_PATH, "CCMatrix.eo-es.eo")
 
-    gym_id:          str = None
-    learning_rate: float = 2.5e-4
-    total_timesteps: int = 25_000
+    corpus_path: str = os.path.join(PROCESSED_DATA_PATH, "corpus.csv")
+    corpus_raw_path: str = os.path.join(PROCESSED_DATA_PATH, "corpus_raw.csv")
 
-    torch_deterministic: bool = True
-    cuda:                bool = True
 
-    track_run:         bool = False
-    wandb_project_name: str = "RL"
-    wandb_entity:       str = None
-
-    def __post_init__(self):
-        ...
 
 def args_to_config(args: Namespace):
     """From the args namespace, create a Configuration.
