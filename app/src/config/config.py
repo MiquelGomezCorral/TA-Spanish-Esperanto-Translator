@@ -34,15 +34,20 @@ class Configuration:
     tgt_name: str = "Esperanto"
     src_code: str = "spa_Latn"
     tgt_code: str = "epo_Latn"
+    task_prefix: str = f"translate from {src_name} to {tgt_name}: "
 
     max_tok_length: int = 16
-    batch_size: int = 32
-    max_batches: int = 1000
+    batch_size: int = 96
+    max_epoch: int = 5
+    data_fraction: float = 1.0  # Use full data by default
 
     def __post_init__(self):
         self.fine_tune_model_name = f"{self.model_name.split('/')[-1]}-finetuned-es-to-eo"
         self.output_dir = os.path.join(self.MODELS_PATH, self.fine_tune_model_name)
         self.logging_dir = os.path.join(self.output_dir, "logs")
+
+        self.task_prefix = f"translate from {self.src_name} to {self.tgt_name}: "
+
         make_dirs([
             self.DATA_PATH,
             self.RAW_DATA_PATH,
