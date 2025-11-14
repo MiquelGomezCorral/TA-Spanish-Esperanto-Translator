@@ -4,9 +4,7 @@ Configuration of project variables that we want to have available
 everywhere and considered configuration.
 """
 import os
-import dataclasses
 from dataclasses import dataclass
-from argparse import Namespace
 
 
 @dataclass
@@ -23,21 +21,16 @@ class Configuration:
     corpus_path: str = os.path.join(PROCESSED_DATA_PATH, "corpus.csv")
     corpus_raw_path: str = os.path.join(PROCESSED_DATA_PATH, "corpus_raw.csv")
 
+    # =========================== PARAMETERS ===========================
+    val_split: float = 0.15
+    test_split: float = 0.15
 
+    model_name: str = ""
+    src_name: str = "Spanish"
+    tgt_name: str = "Esperanto"
+    src_code: str = "spa_Latn"
+    tgt_code: str = "epo_Latn"
 
-def args_to_config(args: Namespace):
-    """From the args namespace, create a Configuration.
+    max_tok_length: int = 16
 
-    It will change all the fields that have ben added to the args.
-    If a field is not added in the args will be ignored.
-    Fields in the args that are not in the Config this will be ignored.
-
-    Args:
-        args (Namespace): Parsed arguments. 
-
-    Returns:
-        Configuration: Configuration with args values.
-    """
-    fields = {f.name for f in dataclasses.fields(Configuration)}
-    filtered = {k: v for k, v in vars(args).items() if k in fields}
-    return Configuration(**filtered)
+    max_batches: int = 1000
