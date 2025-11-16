@@ -24,7 +24,13 @@ class Configuration:
     output_model_dir: str = os.path.join(MODELS_PATH, "es_to_eo_finetuned")
     logging_dir: str = os.path.join(RESULTS_PATH, "logs")
 
+    tokenized_corpus_llama_prompting: str = os.path.join(PROCESSED_DATA_PATH, "tokenized_corpus_LLAMA_PROMPTING.pkl")
+    tokenized_corpus_llama_finetune: str = os.path.join(PROCESSED_DATA_PATH, "tokenized_corpus_LLAMA_FINETUNE.pkl")
+    tokenized_corpus_nllb_prompting: str = os.path.join(PROCESSED_DATA_PATH, "tokenized_corpus_NLLB_BASELINE.pkl")
+    tokenized_corpus_nllb_finetune: str = os.path.join(PROCESSED_DATA_PATH, "tokenized_corpus_NLLB_FINETUNE.pkl")
+
     # =========================== PARAMETERS ===========================
+    seed: int = 42
     val_split: float = 0.15
     test_split: float = 0.15
 
@@ -35,6 +41,7 @@ class Configuration:
     src_code: str = "spa_Latn"
     tgt_code: str = "epo_Latn"
     task_prefix: str = f"translate from {src_name} to {tgt_name}: "
+    num_shots: int = 3  # For prompting
 
     max_tok_length: int = 16
     batch_size: int = 96
