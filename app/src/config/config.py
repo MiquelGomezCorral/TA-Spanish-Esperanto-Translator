@@ -38,6 +38,8 @@ class Configuration:
     fine_tune_model_name: str = "finetuned-es-to-eo"
     src_name: str = "Spanish"
     tgt_name: str = "Esperanto"
+    src_abr: str = "es"
+    tgt_abr: str = "eo"
     src_code: str = "spa_Latn"
     tgt_code: str = "epo_Latn"
     task_prefix: str = f"translate from {src_name} to {tgt_name}: "
