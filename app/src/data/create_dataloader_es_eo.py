@@ -23,7 +23,7 @@ def get_es_eo_dataset(CONFIG: Configuration):
 
     n_total = len(df_corpus)
     n_test = int(n_total * CONFIG.test_split) 
-    n_valid = int(n_total * CONFIG.valid_split)  
+    n_valid = int(n_total * CONFIG.val_split)  
 
     df_test = df_corpus[:n_test]
     df_valid = df_corpus[n_test:n_test + n_valid]
