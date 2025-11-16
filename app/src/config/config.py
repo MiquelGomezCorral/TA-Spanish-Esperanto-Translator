@@ -41,7 +41,7 @@ class Configuration:
     src_code: str = "spa_Latn"
     tgt_code: str = "epo_Latn"
     task_prefix: str = f"translate from {src_name} to {tgt_name}: "
-    num_shots: int = 3  # For prompting
+    num_shots: int = 5  # For prompting
 
     max_tok_length: int = 16
     batch_size: int = 96
