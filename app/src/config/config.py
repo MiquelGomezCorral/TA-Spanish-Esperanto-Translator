@@ -19,6 +19,7 @@ class Configuration:
     esperanto_data: str = os.path.join(RAW_DATA_PATH, "CCMatrix.eo-es.eo")
 
     corpus_path: str = os.path.join(PROCESSED_DATA_PATH, "corpus.csv")
+    corpus_path_smaller: str = os.path.join(PROCESSED_DATA_PATH, "corpus_smaller.csv")
     corpus_raw_path: str = os.path.join(PROCESSED_DATA_PATH, "corpus_raw.csv")
 
     output_model_dir: str = os.path.join(MODELS_PATH, "es_to_eo_finetuned")
