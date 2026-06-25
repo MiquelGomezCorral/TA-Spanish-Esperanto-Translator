@@ -10,7 +10,7 @@ descriptionLong:
     Master's course project on neural machine translation for the low-resource Spanish→Esperanto language pair. Implements and benchmarks three model families: (1) NLLB-200 (Meta's 200-language model) — baseline inference and fine-tuning, (2) mT5-large — fine-tuning with BLEU and chrF optimization, (3) LLaMA — few-shot prompting and fine-tuning. Uses CCMatrix parallel corpus (~40k aligned sentences). Evaluates translation quality with BLEU, chrF, and human assessment. Includes comprehensive notebooks for each experiment and a companion research paper with full methodology and results analysis.
   es: |
     Proyecto del máster sobre traducción automática neuronal para el par de lenguas de bajos recursos Español→Esperanto. Implementa y compara tres familias de modelos: (1) NLLB-200 (modelo de 200 lenguas de Meta) — inferencia baseline y fine-tuning, (2) mT5-large — fine-tuning con optimización BLEU y chrF, (3) LLaMA — few-shot prompting y fine-tuning. Usa el corpus paralelo CCMatrix (~40k frases alineadas). Evalúa calidad de traducción con BLEU, chrF y evaluación humana. Incluye notebooks detallados para cada experimento y un paper de investigación complementario con metodología completa y análisis de resultados.
-technologies: [python, huggingface, pytorch, jupyter, ai]
+technologies: [latex, python, huggingface, pytorch, jupyter, ai]
 tags: [class]
 date:
   en: Nov 2025
