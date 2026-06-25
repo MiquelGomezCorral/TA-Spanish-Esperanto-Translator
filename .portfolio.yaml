@@ -1,6 +1,6 @@
 title:
-  en: Spanish-Esperanto Neural Machine Translation (NLLB + mT5 + LLaMA)
-  es: Traducción Automática Español-Esperanto (NLLB + mT5 + LLaMA)
+  en: Spanish-Esperanto Neural Machine Translation
+  es: Traducción Automática Español-Esperanto
 finished: finished
 descriptionShort:
   en: Neural machine translation project for Spanish→Esperanto, a low-resource language pair. Compares NLLB-200, mT5-large, and LLaMA with fine-tuning and few-shot prompting. Trained on CCMatrix parallel corpus. Includes a research paper.
@@ -18,4 +18,5 @@ keywords:
 slug: TA-Spanish-Esperanto-Translator
 order: 62
 featured: false
+
 
