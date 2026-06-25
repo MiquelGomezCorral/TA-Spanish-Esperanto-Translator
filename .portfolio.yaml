@@ -12,11 +12,15 @@ descriptionLong:
     Proyecto del máster sobre traducción automática neuronal para el par de lenguas de bajos recursos Español→Esperanto. Implementa y compara tres familias de modelos: (1) NLLB-200 (modelo de 200 lenguas de Meta) — inferencia baseline y fine-tuning, (2) mT5-large — fine-tuning con optimización BLEU y chrF, (3) LLaMA — few-shot prompting y fine-tuning. Usa el corpus paralelo CCMatrix (~40k frases alineadas). Evalúa calidad de traducción con BLEU, chrF y evaluación humana. Incluye notebooks detallados para cada experimento y un paper de investigación complementario con metodología completa y análisis de resultados.
 technologies: [python, huggingface, pytorch, jupyter]
 tags: [class]
+date:
+  en: Nov 2025
+  es: Nov 2025
 keywords:
   en: [Esperanto translation, Spanish Esperanto, low-resource language, NMT, NLLB-200, mT5, LLaMA prompting, neural machine translation, minority language, CCMatrix, fine-tuning]
   es: [traducción de esperanto, español esperanto, lengua de bajos recursos, NMT, NLLB-200, mT5, prompting con LLaMA, traducción automática neuronal, lengua minoritaria, CCMatrix, fine-tuning]
 slug: TA-Spanish-Esperanto-Translator
 order: 62
 featured: false
+
 
 
